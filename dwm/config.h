@@ -18,6 +18,7 @@ static const unsigned int baralpha 	= 0xcc;
 static const unsigned int borderalpha 	= 0xcc;
 static const char *fonts[] 		= {
 	"monospace:style=Bold:size=9",
+	"RobotoMono Nerd Font Propo:style=Bold:size=9",
 	"Font Awesome 6 Free:style=Solid:size=9",
 	"Noto Color Emoji:size=9",
 	};
@@ -93,12 +94,12 @@ static const Env envs[] = {
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
-#define TERMCMD(cmd) { .v = (const char*[]){ "st", "-e", cmd, NULL } }
+#define TERMCMD(cmd) { .v = (const char*[]){ "alacritty", "-e", cmd, NULL } }
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-p", "Open: ", NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 static const Key keys[] = {
 	/* modifier 		key 		function 	argument */

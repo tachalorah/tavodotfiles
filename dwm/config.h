@@ -59,6 +59,8 @@ static const Rule rules[] = {
 	{ "Alacritty", 		NULL, 		NULL, 		0, 		0, 		1, 		0, 		-1 },
 	{ "St", 		NULL, 		NULL, 		0, 		0, 		1, 		0, 		-1 },
 	{ "Nestopia", 		NULL, 		NULL, 		0, 		1, 		0, 		0, 		-1 },
+	{ "fceux", 		NULL, 		NULL, 		0, 		1, 		0, 		0, 		-1 },
+	{ "jollygood", 		NULL, 		NULL, 		0, 		1, 		0, 		0, 		-1 },
 	{ NULL, 		NULL, 		"Event Tester", 0, 		0, 		0, 		1, 		-1 }, /* xev */
 };
 
@@ -115,7 +117,7 @@ static const Key keys[] = {
 	{ MODKEY, 		XK_Print, 	spawn, 		SHCMD("~/.local/scripts/dwm-scrshoter full") },
 	{ MODKEY|ShiftMask, 	XK_Print, 	spawn, 		SHCMD("~/.local/scripts/dwm-scrshoter window") },
 	{ MODKEY|Mod1Mask, 	XK_Print, 	spawn, 		SHCMD("~/.local/scripts/dwm-scrshoter selected") },
-	{ MODKEY|ShiftMask, 	XK_k,	 	spawn, 		SHCMD("~/.local/scripts/screenkey_toggle") },
+	{ MODKEY|ShiftMask, 	XK_k,	 	spawn, 		SHCMD("~/.local/scripts/skey_toggle") },
 	{ MODKEY|ShiftMask, 	XK_m,	 	spawn, 		SHCMD("~/.local/scripts/dmanopen") },
 	{ MODKEY, 		XK_r, 		spawn, 		SHCMD("~/.local/scripts/dwm-randombg") },
 	{ MODKEY|ShiftMask, 	XK_x,	 	spawn, 		SHCMD("xkill") },

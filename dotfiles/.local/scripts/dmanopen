@@ -6,7 +6,7 @@ if [ -n "${result}" ]; then
 	page=$(echo "${result}" | grep -o '^[^(]*' | awk '{print $1}')
 	section=$(echo "${result}" | grep -o '([^)]*)' | tr -d '()')
 
-	st -e man ${section} ${page%%,*}
+	alacritty -e man ${section} ${page%%,*}
 	unset page section
 fi
 

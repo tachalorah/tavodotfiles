@@ -1,13 +1,16 @@
 #!/bin/sh
 
-result="$(apropos . | dmenu -l 5 -p 'Open: ')"
+result="$(apropos . 2>/dev/null | dmenu -f -l 5 -p 'Open: ')"
 
-if [ -n "${result}" ]; then
-	page=$(echo "${result}" | grep -o '^[^(]*' | awk '{print $1}')
-	section=$(echo "${result}" | grep -o '([^)]*)' | tr -d '()')
+[ -z "$result" ] && exit 0
 
-	alacritty -e man ${section} ${page%%,*}
-	unset page section
+page=$(printf "%s" "$result" | sed 's/^\([^ (]*\).*/\1/' | tr -d ',')
+sect=$(printf "%s" "$result" | sed -n 's/.*(\([^)]*\)).*/\1/p' |
+	cut -d',' -f1)
+
+printf "%s %s\n" "$page" "$sect"
+
+if [ -n "$page" ] && [ -n "$sect" ]; then
+	alacritty -e man "$sect" "$page"
 fi
 
-unset result

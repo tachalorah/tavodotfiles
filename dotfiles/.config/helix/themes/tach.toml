@@ -1,0 +1,40 @@
+inherits = "base16_transparent"
+"ui.menu" = { bg = "default", fg = "white" }
+"ui.menu.selected" = { modifiers = ["reversed"] }
+"ui.selection" = { bg = "black", fg = "gray", modifiers = ["reversed"] }
+"ui.statusline" = { "fg" = "white", modifiers = ["bold"] }
+
+"comment" = "cyan"
+"constant" = "light-red"
+"constant.numeric" = "light-red"
+"function" = { fg = "light-gray", modifiers = ["bold"]}
+"function.macro" = "light-cyan"
+"function.special" = "light-cyan"
+"keyword" = "light-cyan"
+"keyword.import" = "light-cyan"
+"keyword.control" = { fg = "yellow", modifiers = ["bold"] }
+"operator" = { fg = "light-blue", modifiers =  ["bold"] }
+"punctuation" = { fg = "light-blue", modifiers =  ["bold"] }
+"string" = "light-red"
+"type" = { fg = "green", modifiers = ["bold"]}
+"namespace" = { fg = "green", modifiers = ["bold"]}
+"variable" = { fg = "light-gray" }
+
+[palette]
+black = "#000000"
+red = "#e12323"
+green = "#06a43e"
+yellow = "#ea7300"
+blue = "#1257d3"
+magenta = "#c80f6b"
+cyan = "#44a0ef"
+gray = "#dddddd"
+#light-red = "#5a5a5a"
+light-red= "#ff4040"
+light-green = "#0db755"
+light-yellow = "#ff9630"
+light-blue = "#2779e1"
+light-magenta = "#e73f93"
+light-cyan = "#7ac0fe"
+light-gray = "#dddddd"
+white = "#ffffff"

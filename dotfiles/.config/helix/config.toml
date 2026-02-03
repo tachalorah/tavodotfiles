@@ -1,0 +1,29 @@
+theme = "tach"
+
+[editor]
+auto-pairs = false
+line-number = "relative"
+trim-final-newlines = true
+trim-trailing-whitespace = true
+popup-border = "all"
+clipboard-provider = "x-clip"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.lsp]
+auto-signature-help = false
+
+[editor.statusline]
+left = ["spacer", "mode", "spacer", "file-name"]
+right = ["spinner", "version-control", "spacer", "file-encoding", "position-percentage", "position"]
+mode.normal = "normal"
+mode.insert = "insert"
+mode.select = "select"
+
+[keys.select]
+"C-space" = "signature_help"
+[keys.normal]
+"C-space" = "signature_help"
+[keys.insert]
+"C-space" = "signature_help"

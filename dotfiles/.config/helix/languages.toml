@@ -1,0 +1,11 @@
+[[language]]
+name = "c"
+indent = { tab-width = 8, unit = "	" }
+auto-format = true
+formatter = { command = "clang-format", args = ["--style=file:/home/tch/.config/clang-format/freebsd-knr"]}
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 8, unit = "	" }
+auto-format = true
+formatter = { command = "clang-format", args = ["--style=file:/home/tch/.config/clang-format/freebsd-knr"]}

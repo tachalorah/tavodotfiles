@@ -1,3 +1,4 @@
+/* clang-format off */
 /* user and group to drop privileges to */
 static const char *user  = "nobody";
 static const char *group = "nogroup";
@@ -25,4 +26,4 @@ static const char *message = "Suckless: Software that sucks less.";
 static const char *text_color = "#aaaaaa";
 
 /* text size (must be a valid size) */
-static const char *font_name = "monospace:size=10";
+static const char *font_name = "MonaspiceNe Nerd Font Propo:size=10";

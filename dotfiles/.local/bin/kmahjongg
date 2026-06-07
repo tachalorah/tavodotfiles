@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cd "/home/tch/.wine/drive_c/Program Files/kmahjongg/bin"
-wine kmahjongg.exe

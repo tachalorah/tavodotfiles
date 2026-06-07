@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+/* clang-format off */
 
 /*
  * appearance
@@ -8,6 +9,7 @@
 static char *font = "monospace:size=10";
 /* Spare fonts */
 static char *font2[] = {
+	"Roboto Mono:size=10",
 	"Noto Sans Mono:size=10",
 	"Font Awesome 6 Free:style=Solid:size=10",
 	"Noto Color Emoji:style=Bold:size=10",

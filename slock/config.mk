@@ -10,14 +10,18 @@ MANPREFIX = ${PREFIX}/share/man
 X11INC = /usr/X11R6/include
 X11LIB = /usr/X11R6/lib
 
+FREETYPEINC = /usr/include/freetype2
+# On BSDs uncomment
+#FREETYPEINC = ${X11INC}/freetype2
+
 # includes and libs
-INCS = -I. -I/usr/include -I${X11INC} -I/usr/include/freetype2
+INCS = -I. -I/usr/include -I${X11INC} -I${FREETYPEINC}
 LIBS = -L/usr/lib -lc -lcrypt -L${X11LIB} -lX11 -lXext -lXrandr -lXinerama -lXft
 
 # flags
 CPPFLAGS = -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE -DHAVE_SHADOW_H
-CFLAGS = -std=c99 -pedantic -Wall -O3 -flto=full -march=native ${INCS} ${CPPFLAGS}
-LDFLAGS = -Wl,--lto-O3 -Wl,-O3 -flto=full -s ${LIBS}
+CFLAGS = -std=c99 -pedantic -Wall -O2 -march=native ${INCS} ${CPPFLAGS}
+LDFLAGS = -Wl,-O2 -Wl,--as-needed -s ${LIBS}
 COMPATSRC = explicit_bzero.c
 
 # On OpenBSD and Darwin remove -lcrypt from LIBS

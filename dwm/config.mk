@@ -34,8 +34,8 @@ LIBS = -L${X11LIB} -lX11 ${XINERAMALIBS} ${FREETYPELIBS} ${XCBLIBS} ${KVMLIB} -l
 # FreeBSD: add -D__BSD_VISIBLE
 CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700L -DVERSION=\"${VERSION}\" ${XINERAMAFLAGS}
 #CFLAGS   = -g -std=c99 -pedantic -Wall -O0 ${INCS} ${CPPFLAGS}
-CFLAGS   = -std=gnu99 -pedantic -Wall -Wno-deprecated-declarations -O3 -flto=full -march=native ${INCS} ${CPPFLAGS}
-LDFLAGS  = -Wl,-O3 -Wl,--lto-O3 -Wl,--as-needed -flto=full -s ${LIBS}
+CFLAGS   = -std=gnu99 -pedantic -Wall -Wno-deprecated-declarations -O2 -march=native ${INCS} ${CPPFLAGS}
+LDFLAGS  = -Wl,-O2 -Wl,--as-needed -s ${LIBS}
 
 # Solaris
 #CFLAGS = -fast ${INCS} -DVERSION=\"${VERSION}\"

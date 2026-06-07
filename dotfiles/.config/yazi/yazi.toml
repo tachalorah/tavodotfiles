@@ -1,0 +1,3 @@
+[opener]
+open = [{ run = 'xdg-open "$1"', desc = "Open", for = "unix" }]
+reveal = [ { run = 'xdg-open "$(dirname "$1")"', desc = "Reveal", for = "unix" },

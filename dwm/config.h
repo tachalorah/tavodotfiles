@@ -37,9 +37,8 @@ static const unsigned int alphas[][3] 	= {
 
 static const char *const autostart[] 	= {
 	"/home/tch/.local/scripts/dwm-randombg", NULL,
-	"/home/tch/.local/scripts/dwm-micmust", NULL,
 	"dwmblocks", NULL,
-	"ibus-daemon", "-dRx", NULL,
+	"fcitx5", "-D", NULL,
 	"unclutter", NULL,
 	"picom", NULL,
 	NULL /* terminate */
@@ -81,9 +80,9 @@ static const Layout layouts[] = {
 
 static const Env envs[] = {
 	/* variable 			value */
-	{ "GTK_IM_MODULE",		"ibus" },
-	{ "QT_IM_MODULE",		"ibus" },
-	{ "XMODIFIERS",			"@im=ibus" },
+	{ "GTK_IM_MODULE",		"fcitx" },
+	{ "QT_IM_MODULE",		"fcitx" },
+	{ "XMODIFIERS",			"@im=fcitx" },
 	{ "QT_QPA_PLATFORMTHEME", 	"qt6ct" },
 };
 
@@ -97,12 +96,12 @@ static const Env envs[] = {
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
-#define TERMCMD(cmd) { .v = (const char*[]){ "st", "-e", cmd, NULL } }
+#define TERMCMD(cmd) { .v = (const char*[]){ "alacritty", "-e", cmd, NULL } }
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-p", "Open: ", NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 static const Key keys[] = {
 	/* modifier 		key 		function 	argument */
@@ -122,7 +121,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask, 	XK_m,	 	spawn, 		SHCMD("~/.local/scripts/dmanopen") },
 	{ MODKEY, 		XK_r, 		spawn, 		SHCMD("~/.local/scripts/dwm-randombg") },
 	{ MODKEY|ShiftMask, 	XK_x,	 	spawn, 		SHCMD("xkill") },
-	{ ControlMask|Mod1Mask,	XK_Delete, 	spawn, 		TERMCMD("htop") },
+	{ ControlMask|Mod1Mask,	XK_Delete, 	spawn, 		TERMCMD("top") },
 	{ MODKEY,	 	XK_e,	 	spawn, 		TERMCMD("yazi") },
 	{ MODKEY,	 	XK_n,	 	spawn, 		TERMCMD("nmtui") },
 	{ MODKEY,	 	XK_m,	 	spawn, 		TERMCMD("ncmpcpp") },

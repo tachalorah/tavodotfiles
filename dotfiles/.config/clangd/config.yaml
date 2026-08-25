@@ -1,2 +1,6 @@
 CompileFlags:
   Add: [-march=native]
+
+Diagnostics:
+  UnusedIncludes: Strict
+  MissingIncludes: Strict

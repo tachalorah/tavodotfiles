@@ -12,7 +12,7 @@ case $1 in
 esac
 
 if [ ! -z $mode ]; then
-	out="${HOME}/Screenshots/screenshot-${mode}-$(date +'%F_%H-%M-%S').png"
+	out="${HOME}/Screenshots/screenshot-$(date +'%F_%H-%M-%S')-${mode}.png"
 	${cmd} ${opts} ${out}
 	xclip -selection clipboard -t image/png -i ${out}
 	unset out

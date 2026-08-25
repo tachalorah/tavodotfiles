@@ -11,6 +11,6 @@ sect=$(printf "%s" "$result" | sed -n 's/.*(\([^)]*\)).*/\1/p' |
 printf "%s %s\n" "$page" "$sect"
 
 if [ -n "$page" ] && [ -n "$sect" ]; then
-	st -e man "$sect" "$page"
+	alacritty -e man "$sect" "$page"
 fi
 

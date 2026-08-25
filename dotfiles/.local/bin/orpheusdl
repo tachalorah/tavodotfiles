@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cd /home/tch/.local/share/OrpheusDL && python3 ./orpheus.py "$@"
+cd /home/tch/.local/opt/OrpheusDL && python3 ./orpheus.py "$@"

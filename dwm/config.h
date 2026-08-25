@@ -121,7 +121,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask, 	XK_m,	 	spawn, 		SHCMD("~/.local/scripts/dmanopen") },
 	{ MODKEY, 		XK_r, 		spawn, 		SHCMD("~/.local/scripts/dwm-randombg") },
 	{ MODKEY|ShiftMask, 	XK_x,	 	spawn, 		SHCMD("xkill") },
-	{ ControlMask|Mod1Mask,	XK_Delete, 	spawn, 		TERMCMD("htop") },
+	{ ControlMask|Mod1Mask,	XK_Delete, 	spawn, 		TERMCMD("top") },
 	{ MODKEY,	 	XK_e,	 	spawn, 		TERMCMD("yazi") },
 	{ MODKEY,	 	XK_n,	 	spawn, 		TERMCMD("nmtui") },
 	{ MODKEY,	 	XK_m,	 	spawn, 		TERMCMD("ncmpcpp") },
